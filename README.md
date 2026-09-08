@@ -1,6 +1,6 @@
 # Serotonin UI
 
-Remade Serotonin (the external) to a UI library. The developer chooses every tab, control, ESP target, and optional feature.
+Custom client-side executor UI library inspired by the supplied dark and teal reference. The developer chooses every tab, control, ESP target, and optional feature.
 
 ## Load the library
 
@@ -17,6 +17,18 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/noicyreal/serotonin-u
 ```
 
 Edit [example.luau](example.luau) to select Preview, ESP, ESPPreview, Notifications, ControlsPage, SettingsPage, and ConfigsPage. Remove individual Add* calls to remove controls.
+
+## FRONTLINES conversion
+
+[frontlines-serotonin.luau](frontlines-serotonin.luau) converts the supplied FRONTLINES script from Pepsi UI to Serotonin while preserving its actor payload and command callbacks. It includes Combat, Visuals, Settings, and Configs tabs; Hitbox and accent-mode dropdowns; toggles; sliders; a color picker; keybind; multiline config textbox; buttons; live status labels; notifications; and an optional ESP settings preview.
+
+Run it from an executor in the supported FRONTLINES place:
+
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/noicyreal/serotonin-ui/main/frontlines-serotonin.luau"))()
+```
+
+See [the FRONTLINES guide](docs/FRONTLINES.md) for the complete control map.
 
 ## Create your own UI
 
@@ -44,6 +56,7 @@ Preview=true on the ESP controller mirrors its target and visual settings into t
 - [Controls and configuration API](docs/API.md)
 - [ESP and optional preview](docs/ESP.md)
 - [Notifications](docs/NOTIFICATIONS.md)
+- [FRONTLINES conversion](docs/FRONTLINES.md)
 - [Validation](docs/VALIDATION.md)
 
 Call window:Destroy() when unloading. This cleans up owned GUI, ESP, notifications, and connections.
