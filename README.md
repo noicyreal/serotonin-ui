@@ -1,6 +1,6 @@
 # Serotonin UI
 
-Custom client-side executor UI library inspired by the supplied dark and teal reference. The developer chooses every tab, control, ESP target, and optional feature.
+Remade Serotonin (the external) to a UI library. The developer chooses every tab, control, ESP target, and optional feature.
 
 ## Load the library
 
